@@ -26,3 +26,32 @@ cd ws-client
 node ws-client.js //for connecting directly to the sever
 node ws-client.js gateway //for connection to the server through gateway
 ```
+
+### Behavior example
+
+#### Direct connection
+```
+$ node ws-client.js
+cconnection to ws://localhost:8080/
+11:40:35
+Connection opened on: 127.0.0.1:8090
+11:40:40
+ping received
+11:40:45
+ping received
+11:40:50
+ping received
+11:40:55
+ping received
+11:41:0
+ping received
+```
+
+#### Gateway connection
+
+```
+$ node ws-client.js gateway
+connection to ws://localhost:8080/
+11:40:38
+Connection opened on: 127.0.0.1:8080
+```
