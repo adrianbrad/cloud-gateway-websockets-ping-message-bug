@@ -1,3 +1,5 @@
+Related to this issue [spring-cloud-gateway#729](https://github.com/spring-cloud/spring-cloud-gateway/issues/729) 
+
 Currently using the 2.1.0 version of Spring Cloud Gateway if a Websocket connection is made through the gateway the Ping messages sent by the server are not received on the client
 
 ### Running
