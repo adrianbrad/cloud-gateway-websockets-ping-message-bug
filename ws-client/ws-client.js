@@ -7,7 +7,7 @@ if (arg == 'gateway') {
     console.log("connection to ws://localhost:8080/")
 } else {
     ws = new WebSocket("ws://localhost:8090/")
-    console.log("cconnection to ws://localhost:8080/")
+    console.log("connection to ws://localhost:8090/")
 }
 
 ws.on('open', function open() {
