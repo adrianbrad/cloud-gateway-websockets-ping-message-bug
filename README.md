@@ -32,7 +32,7 @@ node ws-client.js gateway //for connection to the server through gateway
 #### Direct connection
 ```
 $ node ws-client.js
-cconnection to ws://localhost:8080/
+cconnection to ws://localhost:8090/
 11:40:35
 Connection opened on: 127.0.0.1:8090
 11:40:40
