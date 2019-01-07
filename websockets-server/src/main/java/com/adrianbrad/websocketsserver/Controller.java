@@ -16,13 +16,13 @@ public class Controller extends AbstractWebSocketHandler {
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        System.out.println("New WebSocket session: " + session);
+        System.out.println("New WebSocket session: " + session.getRemoteAddress());
         managedConnections.add(session);
     }
 
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-        System.out.println("Session: " + session + " closed");
+        System.out.println("Session: " + session.getRemoteAddress() + " closed");
         managedConnections.remove(session);
     }
 
@@ -40,9 +40,10 @@ public class Controller extends AbstractWebSocketHandler {
     }
 
     private void sendPingMessage(WebSocketSession session) {
-        System.out.println("Sending ping message to session: " + session);
+        System.out.println("Sending ping message to session: " + session.getRemoteAddress());
         try {
             session.sendMessage(new PingMessage());
+            session.sendMessage(new PongMessage());
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -20,6 +20,11 @@ ws.on('ping', function ping(data) {
     console.log('ping received')
 })
 
+ws.on('pong', function ping(data) {
+    addTimestamp()
+    console.log('pong received')
+})
+
 ws.on('close', function close(closeEvent) {
     addTimestamp()
     console.log(closeEvent)
